@@ -23,7 +23,7 @@ namespace WebAPISample.Controllers
         public IActionResult Get()
         {
             // Retrieve all movies from db logic
-            var movies = _context.Movies.Select(m => m.MovieId).ToList();
+            var movies = _context.Movies.ToList();
             return Ok(movies);
         }
 
@@ -67,6 +67,9 @@ namespace WebAPISample.Controllers
         public IActionResult Delete(int id)
         {
             // Delete movie from db logic
+            var movieToDelete = _context.Movies.Where(m => m.MovieId == id).SingleOrDefault();
+            _context.Remove(movieToDelete);
+            _context.SaveChangesAsync();
             return Ok();
         }
     }
