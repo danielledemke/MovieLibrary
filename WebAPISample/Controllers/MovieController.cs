@@ -43,6 +43,8 @@ namespace WebAPISample.Controllers
         {
             // Create movie in db logic
             value = new Movie();
+            _context.Movies.Add(value);
+            _context.SaveChangesAsync();
             return Ok(value);
         }
 
@@ -65,6 +67,9 @@ namespace WebAPISample.Controllers
         public IActionResult Delete(int id)
         {
             // Delete movie from db logic
+            var movieToDelete = _context.Movies.Where(m => m.MovieId == id).SingleOrDefault();
+            _context.Remove(movieToDelete);
+            _context.SaveChangesAsync();
             return Ok();
         }
     }
