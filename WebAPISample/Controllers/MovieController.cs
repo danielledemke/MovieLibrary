@@ -31,9 +31,10 @@ namespace WebAPISample.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
+            var selectedMovie = _context.Movies.Where(m => m.MovieId == id).SingleOrDefault();
             // Retrieve movie by id from db logic
             // return Ok(movie);
-            return Ok();
+            return Ok(selectedMovie);
         }
 
         // POST api/movie
@@ -41,7 +42,8 @@ namespace WebAPISample.Controllers
         public IActionResult Post([FromBody]Movie value)
         {
             // Create movie in db logic
-            return Ok();
+            value = new Movie();
+            return Ok(value);
         }
 
         // PUT api/movie
@@ -49,6 +51,8 @@ namespace WebAPISample.Controllers
         public IActionResult Put([FromBody] Movie movie)
         {
             // Update movie in db logic
+            var updatedMovie = _context.Movies.Where(m => m.MovieId == movie.MovieId);
+            updatedMovie.Title = movie.Title;
             return Ok();
         }
 
