@@ -1,22 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>jQuery AJAX POST Form</title>
-    <meta charset="utf-8">
+  <title>Movie Library</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+
+<div class="jumbotron text-center">
+  <h1>Movie Library</h1>
+  <p>Try Searching for a movie or add a new one!</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h4>Title</h4>
+      <p>Type in the title of the movie.</p>
+    </div>
+    <div class="col-sm-4">
+      <h4>Director</h4>
+      <p>Type in the director of the movie.</p>
+    </div>
+    <div class="col-sm-4">
+      <h4>Genre</h4>        
+      <p>Type in the genre of the movie.</p>
+    </div>
+  </div>
+</div>
 
 <div id="response">
     <pre></pre>
 </div>
-
-<form id="my-form">
-    <input type="text" name="title" placeholder="Title" />
-    <input type="text" name="director" placeholder="Director" />
-    <input type="text" name="genre" placeholder="Genre"/>
-
-    <button type="submit">Submit</button>
-</form>
+<div class="container">
+    <h3>Search for a movie</h3>
+    <form id="my-form">
+        <input type="text" name="title" placeholder="Title" />
+        <input type="text" name="director" placeholder="Director" />
+        <input type="text" name="genre" placeholder="Genre"/>
+    
+        <button type="button" class="btn btn-primary">Submit</button>
+    </form>  
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="./app.js"></script>
