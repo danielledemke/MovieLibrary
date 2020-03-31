@@ -42,7 +42,7 @@ namespace WebAPISample.Controllers
         public IActionResult Post([FromBody]Movie value)
         {
             // Create movie in db logic
-            value = new Movie();
+            //value = new Movie();
             _context.Movies.Add(value);
             _context.SaveChangesAsync();
             return Ok(value);
