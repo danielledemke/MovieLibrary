@@ -9,11 +9,11 @@
         $.ajax({
             url: 'https://localhost:44325/api/movie',
             dataType: 'json',
-            type: 'post',
+            type: 'get',
             contentType: 'application/json',
             data: JSON.stringify(dict),
             success: function( data, textStatus, jQxhr ){
-                $('#response pre').html( data );
+                $('#response').html( data );
             },
             error: function( jqXhr, textStatus, errorThrown ){
                 console.log( errorThrown );
@@ -25,3 +25,23 @@
 
     $('#my-form').submit( processForm );
 })(jQuery);
+
+function addNewMovie(){
+    $.ajax({
+        url: 'https://localhost:44325/api/movie',
+        dataType: 'json',
+        type: 'post',
+        contentType: 'application/json',
+        data: JSON.stringify(dict),
+        success: function( data, textStatus, jQxhr ){
+            $('#response pre').html( data );
+        },
+        error: function( jqXhr, textStatus, errorThrown ){
+            console.log( errorThrown );
+        }
+    });
+};
+
+function searchForMovie(){
+    $("#my-form").
+}

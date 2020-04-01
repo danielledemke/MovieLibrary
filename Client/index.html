@@ -12,9 +12,9 @@
 
 <div class="jumbotron text-center">
   <h1>Movie Library</h1>
-  <p>Try Searching for a movie or add a new one!</p> 
+  <p>Try Searching for a movie or Add a new one!</p> 
 </div>
-  
+
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
@@ -31,19 +31,33 @@
     </div>
   </div>
 </div>
-
-<div id="response">
-    <pre></pre>
-</div>
 <div class="container">
-    <h3>Search for a movie</h3>
+    <h3>Search for a Movie</h3>
     <form id="my-form">
         <input type="text" name="title" placeholder="Title" />
         <input type="text" name="director" placeholder="Director" />
         <input type="text" name="genre" placeholder="Genre"/>
     
-        <button type="button" class="btn btn-primary">Submit</button>
+        <button type="button" onclick="" class="btn btn-primary">Submit</button>
     </form>  
+</div> 
+
+<div id="response">
+    <pre></pre>
+</div>
+
+<div class="container" style="width:800px;margin:auto;text-align:center;padding:50px;">
+    
+    <div class="row">
+            <div class="col-6">
+                <h5>See List Of All Movies</h5>
+                <button type="button" onclick="processForm()" class="btn btn-primary" style="background-color:lightslategray">All Movies</button>
+            </div>
+            <div class="col-6">
+                <h5>Add a New Movie</h5>
+                <button type="button" onclick="addNewMovie()" class="btn btn-primary" style="background-color:lightslategray">Add</button>
+            </div>
+    </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
