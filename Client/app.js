@@ -1,3 +1,17 @@
+$(function(){
+    $("#btn").click(function(){
+        $.get('https://localhost:44325/api/movie', function(data){
+            $("#data").append(function(el){
+            `<div> Title: ${data["title"]}</div>
+            <div> Director: ${data["director"]}</div>
+            <div> Genre: ${data["genre"]}</div>`
+            }
+            );
+            
+        })
+    });
+})
+
 (function($){
     function processForm( e ){
         var dict = {

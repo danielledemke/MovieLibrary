@@ -15,6 +15,10 @@
   <p>Try Searching for a movie or Add a new one!</p> 
 </div>
 
+<div id="movies">
+    <p id="data"></p>
+</div>
+
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
@@ -38,7 +42,7 @@
         <input type="text" name="director" placeholder="Director" />
         <input type="text" name="genre" placeholder="Genre"/>
     
-        <button type="button" onclick="" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-primary">Submit</button>
     </form>  
 </div> 
 
@@ -51,16 +55,16 @@
     <div class="row">
             <div class="col-6">
                 <h5>See List Of All Movies</h5>
-                <button type="button" onclick="processForm()" class="btn btn-primary" style="background-color:lightslategray">All Movies</button>
+                <button id="btn" type="button" onclick="addNewMovie()" class="btn btn-primary" style="background-color:lightslategray">All Movies</button>
             </div>
             <div class="col-6">
                 <h5>Add a New Movie</h5>
-                <button type="button" onclick="addNewMovie()" class="btn btn-primary" style="background-color:lightslategray">Add</button>
+                <button type="button" class="btn btn-primary" style="background-color:lightslategray">Add</button>
             </div>
     </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript" src="./app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
