@@ -44,4 +44,35 @@ function addNewMovie(){
 
 function searchForMovie(){
     $("#my-form").
-}
+};
+
+
+
+
+//Dylan
+
+$(function (){
+    var $title = $('#title');
+    var $director = $('#director');
+    var $genre = $('#genre');
+
+    $.ajax({
+        type: 'GET',
+        url: 'https://localhost:44325/api/movie',
+        dataType: 'json',
+        contentType: 'application/json',
+        success: function(movies){
+            $.each(movies, function(i, movies){
+                $movies.append();
+            });
+        },
+        error: function(){
+            alert('Error Loading Movies')
+        }
+    });
+
+    $('#addNewMovie').on('click', function (){
+
+    });
+    
+});
