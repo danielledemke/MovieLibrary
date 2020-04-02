@@ -10,6 +10,9 @@
 </head>
 <body>
 
+<!--
+This is the Top of the page... could eventually place images up here...  
+ -->
 <div class="jumbotron text-center">
   <h1>Movie Library</h1>
   <p>Try Searching for a movie or Add a new one!</p> 
@@ -19,39 +22,85 @@
     <p id="data"></p>
 </div>
 
+<!--
+This just has the minor headers for each of the functions.
+ -->
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
-      <h4>Title</h4>
-      <p>Type in the title of the movie.</p>
+      <h2 class="text-primary">Search</h2>
+      <p class="text-warning">Search for a movie with its title, director, or genre.</p>
     </div>
     <div class="col-sm-4">
-      <h4>Director</h4>
-      <p>Type in the director of the movie.</p>
+      <h2 class="text-primary">Add</h2>
+      <p class="text-danger">Add a movie to the database with the following information.</p>
     </div>
     <div class="col-sm-4">
-      <h4>Genre</h4>        
-      <p>Type in the genre of the movie.</p>
+      <h2 class="text-primary">Update</h2>
+      <p class="text-info">Need to update a movie? Type in the info you want to update below.</p>
     </div>
   </div>
 </div>
+
+<!--
+These are the submit button sections.
+ -->
 <div class="container">
-    <h3>Search for a Movie</h3>
-    <form id="my-form">
-        <input type="text" name="title" placeholder="Title" />
-        <input type="text" name="director" placeholder="Director" />
-        <input type="text" name="genre" placeholder="Genre"/>
-    
-        <button type="button" class="btn btn-primary">Submit</button>
-    </form>  
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Title: <input type="text" id="title" /></p>
+      <p>Director: <input type="text" id="director" /></p>
+      <p>Genre: <input type="text" id="genre" /></p>
+      <button type="button" onclick="" class="btn btn-warning">Submit</button>
+    </div>
+    <div class="col-sm-4">
+      <p>Title: <input type="text" id="title" /></p>
+      <p>Director: <input type="text" id="director" /></p>
+      <p>Genre: <input type="text" id="genre" /></p>
+      <button type="button" onclick="" class="btn btn-danger">Submit</button>
+    </div>
+    <div class="col-sm-4">
+      <p>Title: <input type="text" id="title" /></p>
+      <p>Director: <input type="text" id="director" /></p>
+      <p>Genre: <input type="text" id="genre" /></p>
+      <button type="button" onclick="" class="btn btn-info">Submit</button>
+    </div>
+  </div>
 </div> 
+
+<!--
+This is the table to display movies found.
+ -->
+<div class="container" style="width:800px;margin:auto;text-align:center;padding:50px;">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Movie</th>
+        <th scope="col">Title</th>
+        <th scope="col">Director</th>
+        <th scope="col">Genre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-success">
+        <th scope="row">1.</th>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
 
 <div id="response">
     <pre></pre>
 </div>
 
-<div class="container" style="width:800px;margin:auto;text-align:center;padding:50px;">
-    
+<div class="container" style="width:800px;margin:auto;text-align:center;padding:50px;">   
     <div class="row">
             <div class="col-6">
                 <h5>See List Of All Movies</h5>
