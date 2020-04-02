@@ -1,3 +1,4 @@
+/*
 (function($){
     function processForm( e ){
         var dict = {
@@ -46,7 +47,7 @@ function searchForMovie(){
     $("#my-form").
 };
 
-
+*/
 
 
 //Dylan
@@ -63,7 +64,7 @@ $(function (){
         contentType: 'application/json',
         success: function(movies){
             $.each(movies, function(i, movies){
-                $movies.append();
+                $movies.append('<li>name: ' + movies.title +', genre: ' + movies.genre + '</li>');
             });
         },
         error: function(){
@@ -72,7 +73,23 @@ $(function (){
     });
 
     $('#addNewMovie').on('click', function (){
-
+        var movie = {
+            title: $title.value(),
+            director: $director.value(),
+            genre: $genre.value(),
+        };
+        $.ajax({
+            type: 'POST',
+            url:'https://localhost:44325/api/movie',
+            data: movie,
+            success: function( data, textStatus, jQxhr ){
+                $('#response pre').html( data );
+            },
+            error: function( jqXhr, textStatus, errorThrown ){
+                console.log( errorThrown );
+                alert('Error Adding Movie')
+            }
+        });
     });
-    
+
 });
