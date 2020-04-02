@@ -72,46 +72,24 @@ These are the submit button sections.
 This is the table to display movies found.
  -->
 <div class="container" style="width:800px;margin:auto;text-align:center;padding:50px;">
-  <table class="table table-hover">
+  <table id="movie_table" class="table table-hover">
     <thead>
       <tr>
-        <th scope="col">Movie</th>
         <th scope="col">Title</th>
         <th scope="col">Director</th>
         <th scope="col">Genre</th>
       </tr>
     </thead>
     <tbody>
-      <tr class="table-success">
-        <th scope="row">1.</th>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
-      </tr>
+        <tr class="table-success">
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+          </tr>
     </tbody>
   </table>
 </div>
 
-
-
-
-
-<div id="response">
-    <pre></pre>
-</div>
-
-<div class="container" style="width:800px;margin:auto;text-align:center;padding:50px;">   
-    <div class="row">
-            <div class="col-6">
-                <h5>See List Of All Movies</h5>
-                <button id="btn" type="button" onclick="addNewMovie()" class="btn btn-primary" style="background-color:lightslategray">All Movies</button>
-            </div>
-            <div class="col-6">
-                <h5>Add a New Movie</h5>
-                <button type="button" class="btn btn-primary" style="background-color:lightslategray">Add</button>
-            </div>
-    </div>
-</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="app.js"></script>

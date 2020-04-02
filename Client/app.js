@@ -1,15 +1,15 @@
-/*
-$(function(){
-    $("#btn").click(function(){
-        $.get('https://localhost:44325/api/movie', function(data){
-            $("#data").append(function(el){
-            `<div> Title: ${data["title"]}</div>
-            <div> Director: ${data["director"]}</div>
-            <div> Genre: ${data["genre"]}</div>`
-            }
-            );
-            
-        })
+
+$(document).ready(function(){
+    $.get('https://localhost:44325/api/movie', function(data){
+        var movies = '';
+        $.each(data, function(key,value){
+            movies += '<tr>';
+            movies += '<td>'+value.title+ '</td>';
+            movies += '<td>'+value.director+ '</td>';
+            movies += '<td>'+value.genre+ '</td>';
+            movies += '</tr>';
+        });
+        $('#movie_table').append(movies);
     });
 })
 
